@@ -13,10 +13,25 @@ leetcode/
     └── 2155568441.py  # Accepted submission; filename is its LeetCode submission ID
 ```
 
-The solution files use `.py` for Python, `.sql` for SQL, and `.js` for JavaScript. If I submit another accepted solution for the same problem, it gets a new file named with its submission ID. This keeps earlier attempts available for comparison.
+If I submit another accepted solution for the same problem, it gets a new file named with its submission ID. This keeps earlier attempts available for comparison.
+
+## Supported submission languages
+
+The sync extension currently accepts these LeetCode languages:
+
+| Language | Recognized variants | Saved extension |
+| --- | --- | --- |
+| Python | Python, Python 2, Python 3, `py` | `.py` |
+| Java | Java | `.java` |
+| JavaScript | JavaScript, JavaScript (Node.js), Node.js, `js` | `.js` |
+| SQL | MySQL, Microsoft SQL Server, Oracle, PostgreSQL, SQLite, generic SQL | `.sql` |
+
+Other LeetCode languages are not currently synced.
 
 ## How this repository is updated
 
-A local browser extension detects an accepted LeetCode submission and adds its source file and the problem's `README.md` to this repository. The problem README includes the original question text, examples, constraints, difficulty, and a link back to LeetCode. Existing problem READMEs are left in place so I can add my own notes without losing them.
+A local Chrome extension detects an accepted LeetCode submission and adds its source file and the problem's `README.md` to this repository through GitHub's Contents API. It is a Manifest V3 extension built with vanilla JavaScript, HTML, and CSS; it has no external server, application framework, database, package dependencies, or GitHub OAuth flow.
+
+The problem README includes the original question text, examples, constraints, difficulty, and a link back to LeetCode. Existing solution files and problem READMEs are left in place, so later syncs do not overwrite accepted submissions or personal notes.
 
 Problem statements are from [LeetCode](https://leetcode.com/); the solution code is my own.
